@@ -1,0 +1,445 @@
+B2.2.1
+public class HelloWorld{
+ 
+	public static void main( String args[]){
+		System.out.println("xin chao \n cac ban");
+		System.out.println("Hello world");
+}}
+B2.2.2
+import javax.swing.JOptionPane;
+public class FirstDialog{
+	public static void main(String[] args){
+		JOptionPane.showMessageDialog(null, "Hello world! How are you?");
+		System.exit(0);
+}}
+B2.2.3
+import javax.swing.JOptionPane;
+public class HelloNameDialog{
+	public static void main(String[] args){
+		String result;
+		result=JOptionPane.showInputDialog("enter your name: ");
+		JOptionPane.showMessageDialog(null, "Hi "+ result+"!");
+		System.exit(0);
+}}
+B2.2.4
+import javax.swing.JOptionPane;
+public class ShowTwoNumbers {
+	public static void main(String[] args){
+		String strNum1, strNum2;
+		String strNotification = " You've just entered: ";
+
+		strNum1=JOptionPane.showInputDialog(null, " Please input the first number: ", " Input the first number",
+							     JOptionPane.INFORMATION_MESSAGE);
+		strNotification+=strNum1 + " and ";
+		strNum2=JOptionPane.showInputDialog( null, " Please input the second number: ", " Input the second number",
+							     JOptionPane.INFORMATION_MESSAGE);
+		strNotification+= strNum2;
+		JOptionPane.showMessageDialog(null, strNotification, " Show two numbers", JOptionPane.INFORMATION_MESSAGE);
+		System.exit(0);
+	}
+}
+
+B2.2.5
+import javax.swing.JOptionPane;
+public class calculator {
+	public static void main(String[] args){
+		String strNum1, strNum2;
+		String strNotification = " You've just entered: ";
+
+		strNum1=JOptionPane.showInputDialog(null, " Please input the first number: ", " Input the first number",
+							     JOptionPane.INFORMATION_MESSAGE);
+
+		strNum2=JOptionPane.showInputDialog( null, " Please input the second number: ", " Input the second number",
+							     JOptionPane.INFORMATION_MESSAGE);
+		double num1 = Double.parseDouble(strNum1);
+		double num2 = Double.parseDouble(strNum2);
+		double sum = num1+num2;
+		double difference = num1-num2;
+		double product = num1*num2;
+		
+		String sum1,difference1, product1, quotient1;
+		sum1 = Double.toString(sum); 
+		difference1= Double.toString( difference);
+		product1= Double.toString(product);
+		if ( num2==0){
+			quotient1=" cannot calculate cuz divisor equal to zero";
+			}
+		else{
+			double quotient= num1/num2;
+			quotient1=Double.toString(quotient);}
+		String ans= "Sum: " + sum1 + "\n" + "Difference: " + difference1 + "\n" + "Product: " + product1+ "\n"+ "quotient: " + quotient1; 
+		JOptionPane.showMessageDialog(null, ans, " result", JOptionPane.INFORMATION_MESSAGE);
+		System.exit(0);
+	}
+}
+B2.2.6
+- First-degree, 1 variable
+import javax.swing.JOptionPane;
+public class FirstDegreeEquation {
+	public static void main(String[] args){
+		String stra, strb;
+		stra=JOptionPane.showInputDialog(null, " Please input the first number: ", " Input the first number",
+							     JOptionPane.INFORMATION_MESSAGE);
+
+		strb=JOptionPane.showInputDialog( null, " Please input the second number: ", " Input the second number",
+							     JOptionPane.INFORMATION_MESSAGE);
+		double a = Double.parseDouble(stra);
+		double b = Double.parseDouble(strb);
+		String ans;
+		if(a == 0){
+                    if(b == 0)
+                        ans = "vo so nghiem";
+                    else
+                        ans = "vo nghiem";
+                }
+                else{
+                    double res = -b / a;
+                    ans = Double.toString(res);
+                }
+		
+		JOptionPane.showMessageDialog(null, ans, " result", JOptionPane.INFORMATION_MESSAGE);
+		System.exit(0);
+	}
+}
+- System of 2 equations
+import javax.swing.JOptionPane;
+public class systemequations {
+	public static void main(String[] args){
+		String stra11, stra12, stra21, stra22, strb1, strb2;
+		stra11=JOptionPane.showInputDialog(null, " Please input the a11 number: ", " Input",
+							     JOptionPane.INFORMATION_MESSAGE);
+
+		stra12=JOptionPane.showInputDialog( null, " Please input the a12 number: ", " Input",
+							     JOptionPane.INFORMATION_MESSAGE);
+		strb1=JOptionPane.showInputDialog( null, " Please input the b1 number: ", " Input",
+							     JOptionPane.INFORMATION_MESSAGE);
+		stra21=JOptionPane.showInputDialog( null, " Please input the a21 number: ", " Input",
+							     JOptionPane.INFORMATION_MESSAGE);
+		stra22=JOptionPane.showInputDialog( null, " Please input the a22 number: ", " Input",
+							     JOptionPane.INFORMATION_MESSAGE);
+		strb2=JOptionPane.showInputDialog( null, " Please input the b2 number: ", " Input",
+							     JOptionPane.INFORMATION_MESSAGE);
+		double a11 = Double.parseDouble(stra11);
+		double a12 = Double.parseDouble(stra12);
+		double a21 = Double.parseDouble(stra21);
+		double a22 = Double.parseDouble(stra22);
+		double b1= Double.parseDouble(strb1);
+		double b2= Double.parseDouble(strb2);
+		double D = a11*a22-a12*a21;
+		double D1= b1*a22- a12*b2;
+		double D2= a11*b2 - b1*a21;
+		String ans;
+		if (D==0 && ((b1/b2)==(a11/a21 ))){
+			ans= "infinite solutions";}
+		else if (D==0 && ((b1/b2)!=(a11/a21 ))) {
+			ans= "No solution";}
+		else{   
+			double x1= D1/D;
+			double x2=D2/D;
+			String strx1=Double.toString(x1);
+			String strx2=Double.toString(x2);
+			ans= "x1: " + strx1 + "\nx2: " + strx2;}
+		JOptionPane.showMessageDialog(null, ans, " result", JOptionPane.INFORMATION_MESSAGE);
+		System.exit(0);
+	}
+}
+- Second order
+import javax.swing.JOptionPane;
+
+public class SecondOrder {
+
+    public static void main(String[] args) {
+        String a, b, c;
+        a = JOptionPane.showInputDialog(null, " Please input the a number: ", " Input",
+                JOptionPane.INFORMATION_MESSAGE);
+
+        b = JOptionPane.showInputDialog(null, " Please input the b number: ", " Input",
+                JOptionPane.INFORMATION_MESSAGE);
+        c = JOptionPane.showInputDialog(null, " Please input the c number: ", " Input",
+                JOptionPane.INFORMATION_MESSAGE);
+        double A = Double.parseDouble(a);
+        double B = Double.parseDouble(b);
+        double C = Double.parseDouble(c);
+        String ans;
+        if (A == 0) {
+            if (B == 0) {
+                ans = "no solution";
+            } else {
+                double res = -C / B;
+                ans = Double.toString(res);
+            }
+        }
+        else{
+            double x1, x2;
+            double delta = B*B - 4*A*C;
+            if (delta > 0) {
+                x1 = (float) ((-B + Math.sqrt(delta)) / (2*A));
+                x2 = (float) ((-B - Math.sqrt(delta)) / (2*A));
+                ans = "x1: " + x1 + "\n x2: " + x2;
+            }
+            else if (delta == 0) {
+                x1 = (-B / (2 * A));
+                x2 = x1;
+                ans = "x: " + x1 ;
+            }
+            else
+                ans = "no solution";
+        }
+        JOptionPane.showMessageDialog(null, ans, " result", JOptionPane.INFORMATION_MESSAGE);
+        System.exit(0);
+    }
+}
+
+
+
+
+6.1
+import javax.swing.JOptionPane;
+public class ChoosingOption {
+	public static void main(String[]args){
+		int option= JOptionPane.showConfirmDialog(null, "Do you want to change to the first class ticket?");
+		System.out.print(option);
+		JOptionPane.showMessageDialog(null, "You've chosen: "+ ( option ==JOptionPane.YES_OPTION?"YES":"NO"));
+		System.exit(0);
+	
+
+	}
+}
+
+Questions:
+1. a window with text :" You've chosen : NO" pops up
+2. we can customize the parameter inside the showConfirmDialog() method
+import javax.swing.JOptionPane;
+public class ChoosingOption {
+	public static void main(String[]args){
+		int option= JOptionPane.showConfirmDialog(null, "Do you want to change to the first class ticket?", null, JOptionPane.YES_NO_OPTION);
+		JOptionPane.showMessageDialog(null, "You've chosen: "+ ( option ==JOptionPane.YES_OPTION?"YES":"NO"));
+		System.exit(0);
+	
+
+	}
+}
+6.2
+import java.util.Scanner;
+public class InputFromKeyboard {
+	public static void main(String args[]) {
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("What's your name ?");
+		String strName= keyboard.nextLine();
+		System.out.println("How old are you ? ");
+		int iAge =keyboard.nextInt();
+		System.out.println("how  tall are you (m) ?");
+		double dHeight= keyboard.nextDouble();
+		
+		System.out.println("Mrs/Ms. "+ strName +", " + iAge + " year old" + " Your height is "+ dHeight +".");
+		
+	}
+}
+6.3
+import java.util.Scanner;
+public class Triangle {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		for (int i=0; i<n; i++) {
+			for ( int j=n-i-1; j>=0; j--) {
+				System.out.print(" ");}
+			for ( int k=1; k<=1+2*i; k++ ) {
+				System.out.print("*");}
+		System.out.print("\n");
+			
+			
+		}
+   }
+}
+6.4
+import java.util.*;
+import java.io.*;
+public class DayOfMonth {
+	public static void main(String args[]) {
+	ArrayList<String> arr1 = new ArrayList<String>(3);
+	ArrayList<String> arr2 = new ArrayList<String>(3);
+	ArrayList<String> arr3 = new ArrayList<String>(3);
+	ArrayList<String> arr4 = new ArrayList<String>(3);
+	ArrayList<String> arr5 = new ArrayList<String>(3);
+	ArrayList<String> arr6 = new ArrayList<String>(3);
+	ArrayList<String> arr7 = new ArrayList<String>(3);
+	ArrayList<String> arr8 = new ArrayList<String>(3);
+	ArrayList<String> arr9 = new ArrayList<String>(3);
+	ArrayList<String> arr10 = new ArrayList<String>(3);
+	ArrayList<String> arr11 = new ArrayList<String>(3);
+	ArrayList<String> arr12 = new ArrayList<String>(3);
+	arr1.add("January");
+	arr1.add("Jan");
+	arr1.add("Jan.");
+	arr1.add("1");
+	arr2.add("February");
+	arr2.add("Feb");
+	arr2.add("Feb.");
+	arr2.add("2");
+	arr3.add("March");
+	arr3.add("Mar");
+	arr3.add("Mar.");
+	arr3.add("3");
+	arr4.add("April");
+	arr4.add("Apr");
+	arr4.add("Apr.");
+	arr4.add("4");
+	arr5.add("May");
+	arr5.add("5");
+	arr6.add("June");
+	arr6.add("Jun.");
+	arr6.add("6");
+	arr7.add("July");
+	arr7.add("Jul.");
+	arr7.add("7");
+	arr8.add("August");
+	arr8.add("Aug");
+	arr8.add("Aug.");
+	arr8.add("8");
+	arr9.add("September");
+	arr9.add("Sept.");
+	arr9.add("Sep");
+	arr9.add("9");
+	arr10.add("Oct.");
+	arr10.add("Oct");
+	arr10.add("October");
+	arr10.add("10");
+	arr11.add("November");
+	arr11.add("Nov.");
+	arr11.add("Nov");
+	arr11.add("11");
+	arr12.add("December");
+	arr12.add("Dec.");
+	arr12.add("Dec.");
+	arr12.add("12");
+	HashMap <String, String> my = new HashMap<>();
+	my.put("1","31");
+	my.put("2","28");
+	my.put("3","31");
+	my.put("4","30");	
+	my.put("5","31");
+	my.put("6","30");
+	my.put("7","31");
+	my.put("8","31");
+	my.put("9","30");
+	my.put("10","31");
+	my.put("11","30");
+	my.put("12","31");
+	Scanner scan = new Scanner(System.in);
+	String month = scan.nextLine();
+	Scanner scan1 = new Scanner(System.in);
+	int year = scan1.nextInt();
+	String month1="";
+	if (arr1.contains(month) ) { month1="1";}
+	else if (arr2.contains(month)) { month1="2";}
+	else if (arr3.contains(month)) { month1="3";}
+	else if (arr4.contains(month)) { month1="4";}
+	else if (arr5.contains(month)) { month1="5";}
+	else if (arr6.contains(month)) { month1="6";}
+	else if (arr7.contains(month)) {month1="7";}
+	else if ( arr8.contains(month)) { month1="8";}
+	else if (arr9.contains(month)) { month1="9";}
+	else if ( arr10.contains(month)) { month1="10";}
+	else if (arr11.contains(month)) { month1="11";}
+	else if (arr12.contains(month)) { month1="12";}
+	if ((year%4==0 && year%100!=0) || year%400==0 ) {
+		if (month1=="2") {
+			System.out.print("29");}
+		else { 
+			String res = my.get("4");
+			System.out.print(res);}
+		}
+	else {
+		String res1= my.get(month1);
+		System.out.print(res1);}
+	
+}}
+
+Test: 
+Input1: 
+Feb 2000
+output1: 29
+Input2:
+Feb. 1800
+output2: 28	
+}}
+6.5
+import java.util.*;  
+public class sortArray {
+	public static void main(String args[]) {
+		int n;
+		Scanner sc= new Scanner( System.in);
+		System.out.println("number of elements: ");
+		n=sc.nextInt();
+		int[] array = new int[n];
+		System.out.println(" enter element: ");
+		for ( int i=0; i<n; i++) {
+			array[i]= sc.nextInt();
+		}
+		System.out.println("sorted array");
+		Arrays.sort(array);
+		int sum=0;
+		for (int i = 0; i < array.length; i++)   
+		{       sum+=array[i];
+		System.out.println(array[i]); }
+		System.out.println("Sum :" + sum);
+		double sum1=sum;
+		double average=sum1/n;
+		System.out.println("average : " + average);
+		}
+	}
+
+
+6.6
+import java.util.*; 
+public class matrix {
+	public static void main(String args[]) {
+		int row, col,i,j;
+		Scanner in = new Scanner(System.in);
+		 
+		System.out.println("Enter the number of rows");
+		row = in.nextInt();
+		 
+		System.out.println("Enter the number columns");
+		col = in.nextInt();
+		 
+		int mat1[][] = new int[row][col];
+		int mat2[][] = new int[row][col];
+		int res[][] = new int[row][col];
+		 
+		System.out.println("Enter the elements of matrix1");
+		 
+		for ( i= 0 ; i < row ; i++ )
+		{ 
+		 
+		for ( j= 0 ; j < col ;j++ )
+		mat1[i][j] = in.nextInt();
+		 
+		System.out.println();
+		}
+		System.out.println("Enter the elements of matrix2");
+		 
+		for ( i= 0 ; i < row ; i++ )
+		{
+		 
+		for ( j= 0 ; j < col ;j++ )
+		mat2[i][j] = in.nextInt();
+		 
+		System.out.println();
+		}
+		 
+		for ( i= 0 ; i < row ; i++ )
+		for ( j= 0 ; j < col ;j++ )
+		res[i][j] = mat1[i][j] + mat2[i][j] ; 
+		 
+		System.out.println("Sum of matrices:-");
+		 
+		for ( i= 0 ; i < row ; i++ )
+		{ 
+		for ( j= 0 ; j < col ;j++ )
+		System.out.print(res[i][j]+"\t");
+		 
+		System.out.println();}
+	}
+}
