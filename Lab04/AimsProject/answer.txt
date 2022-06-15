@@ -1,0 +1,12 @@
+1. After the call of swap(jungleDVD, cinderellaDVD), why does the title of these two objects still remain?
+   The value of jungleDVD and cinderellaDVD is the references to their corresponding object.
+Since Java is pass-by-value, when we pass jungleDVD and cinderella to swap(), the
+function swap() creates two copies of value of jungleDVD and cinderellaDVD, we
+will name tham fake1 and fake2 and implement function on them.
+.Anything you do on fake1 and fake2 will not affect jungleDVD and cinderellaDVD. Therefore, two objects remain unchange 
+2. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()), why is
+the title of the JungleDVD changed?
+ In this method, when we pass the "dvd" to the function changeTitle. This function will work on 
+a copy version "dvd1" of "dvd", which have the same value as "dvd" ( the value mentioned here is the reference to 
+the object DigitialVideoDisc). Therefore, when we write dvd.setTitle(title) ( or dvd1.setTitle()) since we work on a copy), 
+it still point to the same object that "dvd" point to to implement the method setter and change the its title eventually.
