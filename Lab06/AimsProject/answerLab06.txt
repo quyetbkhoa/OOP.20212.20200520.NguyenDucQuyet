@@ -1,0 +1,12 @@
+   Create an ArrayList of Media, then add some media (CD, DVD, or Book) to the
+list.
+- Iterate through the list and print out the information of the media by using
+the toString() method.
+Observe what happens and explain it in detail.
+Answer:
+Since it is the arrayList of Media, all element (which maybe is Cd, dvd or book) would be upcasting to Media object.
+we have definition of Upcasting: Upcasting gives us the flexibility to access the parent class members but it is not
+possible to access all the child class members using this feature. Instead of all the members, we can access some 
+specified members of the child class. For instance, we can access the overridden methods.
+Since the toString method have been overriden in cd, dvd, and book class, the code will print the toString method in each children
+class, not parent class( which is Media).

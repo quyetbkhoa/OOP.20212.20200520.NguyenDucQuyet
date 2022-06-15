@@ -1,0 +1,43 @@
+package hust.soict.dsai.test.media;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import hust.soict.dsai.aims.dvd.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
+public class TestMediaCompareTo {
+	public static void main(String[] args) {
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King",
+				"Animation", "Roger Allers", 87, 19.95f);
+		
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction",
+				"George Lucas", 87, 24.95f);
+		
+		DigitalVideoDisc dvd3 =new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+		List<Media> collection = new ArrayList<Media>();
+		collection.add(dvd2);
+		collection.add(dvd1);
+		collection.add(dvd3);
+		Iterator<Media> iterator = collection.iterator();
+		System.out.println("------------------------------------------");
+		System.out.println("The DVDs currently in the order are:");
+		
+		while (iterator.hasNext()) {
+			System.out.println(((DigitalVideoDisc)iterator.next()).getTitle());
+			
+		}
+		java.util.Collections.sort(collection);
+		iterator= collection.iterator();
+		
+		System.out.println("------------------------------------------");
+		System.out.println("The DVDs currently in the order are:");
+		
+		while (iterator.hasNext()) {
+			System.out.println(((DigitalVideoDisc)iterator.next()).getTitle());
+		
+		
+		}
+
+    }
+}

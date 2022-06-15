@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.dvdWrapper"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.TestPassingParameter.dvdWrapper"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="javax.imageio.stream.MemoryCacheImageInputStream"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.MemoryDaemon"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.playable.Playable"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.cd.CompactDisc"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.Media"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+</qualifiedTypeNameHistroy>
