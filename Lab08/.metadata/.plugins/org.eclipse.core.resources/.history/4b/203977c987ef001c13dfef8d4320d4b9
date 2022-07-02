@@ -1,0 +1,63 @@
+package hust.soict.dsai.aims.screen;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class AddItemToStoreScreen extends JFrame {
+	private JTextField tfInput4;
+	private JTextField tfInput3;
+	private JTextField tfInput2;
+	private JTextField tfInput1;
+	private JTextField tfInput;
+	private String title;
+	private String category;
+	private float cost;
+	Container cp= getContentPane();
+	public AddItemToStoreScreen() {
+		
+		cp.setLayout( new GridLayout(3,2));
+		
+		this.title();
+
+		
+        cp.add(new JLabel("Enter category : "));		
+		tfInput1= new JTextField(10);
+		cp.add(tfInput1);
+		
+		cp.add(new JLabel("Enter cost : "));		
+		tfInput2= new JTextField(10);
+		cp.add(tfInput2);
+		
+		tfInput2.addActionListener(new TFInputListener());
+		
+		setTitle("check");
+		setSize(400, 120);
+		setVisible(true);
+		
+	}
+	public void title() {
+		cp.add(new JLabel("Enter Title: "));		
+		tfInput= new JTextField(10);
+		cp.add(tfInput);
+	}
+	private class TFInputListener implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent evt) {
+			title= tfInput.getText();
+			category=tfInput1.getText();
+			cost = Float.parseFloat(tfInput.getText());
+			
+		}
+			
+	}
+	public static void main(String[] args) {
+		new AddItemToStoreScreen();
+	}
+
+}
