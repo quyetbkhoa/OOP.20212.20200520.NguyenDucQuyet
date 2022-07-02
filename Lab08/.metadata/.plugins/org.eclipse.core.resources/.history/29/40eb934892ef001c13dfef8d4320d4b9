@@ -1,0 +1,122 @@
+package hust.soict.dsai.aims.screen;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import hust.soict.dsai.aims.media.Media;
+import hust.soict.dsai.aims.store.Store;
+
+public abstract class AddItemToStoreScreen extends JFrame {
+	private Store store;
+	private String title;
+	private String category;
+	private float cost;
+	private Media media;
+	Container cp= getContentPane();
+	
+//	public AddItemToStoreScreen(Store store) {
+//		this.store= store;
+//		
+//		cp.setLayout( new GridLayout(3,2));
+//		
+//		this.title();
+//
+//		this.category();
+//		
+//		this.cost();
+//		
+//		setTitle("check");
+//		setSize(400, 120);
+//		setVisible(true);
+//		
+//	}
+	public void title() {
+		JTextField tfInput;
+		cp.add(new JLabel("Enter Title: "));		
+		tfInput= new JTextField(10);
+		cp.add(tfInput);
+		tfInput.addActionListener( new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+//			    if(e.getActionCommand().equals("Add book")) {
+				title= tfInput.getText();
+				System.out.println(title);
+//			    } 
+			  }
+		}
+				);
+	}
+	public void category() {
+		JTextField tfInput;
+		cp.add(new JLabel("Enter category : "));		
+		tfInput= new JTextField(10);
+		cp.add(tfInput);
+		tfInput.addActionListener( new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+//			    if(e.getActionCommand().equals("Add book")) {
+				category= tfInput.getText();
+				System.out.println(category);
+//			    } 
+			  }
+		}
+				);
+	}
+	public void cost() {
+		JTextField tfInput;
+		cp.add(new JLabel("Enter cost : "));		
+		tfInput= new JTextField(10);
+		cp.add(tfInput);
+		tfInput.addActionListener( new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+//			    if(e.getActionCommand().equals("Add book")) {
+				cost = Float.parseFloat(tfInput.getText());
+				System.out.println(cost);
+//			    } 
+			  }
+		}
+				);
+	}
+	public void submitButton(Media media) {
+		JButton button = new JButton("Test Button");
+		cp.add(button);
+		button.addActionListener( new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+//			    if(e.getActionCommand().equals("Add book")) {
+				
+//			    } 
+				store.addMedia(media);
+			  }
+		}
+				);
+	}
+//	private class TFInputListener implements ActionListener{
+//		@Override
+//		public void actionPerformed(ActionEvent evt) {
+//			title= tfInput.getText();
+//			category=tfInput1.getText();
+//			cost = Float.parseFloat(tfInput.getText());
+//			
+//		}
+//			
+//	}
+	public String getTitle() {
+		return title;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public float getCost() {
+		return cost;
+	}
+
+}

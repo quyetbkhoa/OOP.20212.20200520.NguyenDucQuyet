@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.dvdWrapper"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.TestPassingParameter.dvdWrapper"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.disc.DigitalVideoDisc"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="javax.imageio.stream.MemoryCacheImageInputStream"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.MemoryDaemon"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.playable.Playable"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="javax.swing.JRadioButton"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="javax.swing.Box"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.media.Media"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.cd.CompactDisc"/>
+    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.book.Book"/>
+    <fullyQualifiedTypeName name="hust.soict.dsai.aims.dvd.DigitalVideoDisc"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,59 @@
+package hust.soict.dsai.aims.screen;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class AddItemToStoreScreen extends JFrame {
+	private JTextField tfInput1;
+	private JTextField tfInput;
+	private JTextField tfOutput;
+	private int sum= 0;
+	private String title;
+	private String category;
+	
+	public AddItemToStoreScreen() {
+		Container cp= getContentPane();
+		cp.setLayout( new GridLayout(2,2));
+		
+		cp.add(new JLabel("Enter an Title: "));
+		
+		tfInput= new JTextField(10);
+		cp.add(tfInput);
+		title= tfInput.getText();
+		System.out.println(title);
+		
+		
+        cp.add(new JLabel("Enter an category : "));
+//		
+		tfInput1= new JTextField(10);
+		cp.add(tfInput1);
+		tfInput.addActionListener(new TFInputListener());
+		tfInput1.addActionListener(new TFInputListener());
+		
+		setTitle("check");
+		setSize(350, 120);
+		setVisible(true);
+		
+	}
+	private class TFInputListener implements ActionListener{
+		@Override
+		public void actionPerformed(ActionEvent evt) {
+			title= tfInput.getText();
+			category=tfInput1.getText();
+			System.out.println(title);
+			System.out.println(category);
+			
+		}
+			
+	}
+	public static void main(String[] args) {
+		new AddItemToStoreScreen();
+	}
+
+}

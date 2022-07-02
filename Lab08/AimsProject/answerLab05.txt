@@ -1,0 +1,4 @@
+Question:Which classes are aggregates of other classes
+Answer:
++ Cart and Store aggregate Media
++ CompactDisc aggregates track
