@@ -11,7 +11,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 import javax.naming.LimitExceededException;
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
@@ -162,12 +165,16 @@ public class StoreManagerScreen extends JFrame{
 		CompactDisc cd2 = new CompactDisc("q","fds","qwqw", "eqeq", 233);
 		
 		Store store = new Store();
+<<<<<<< HEAD
 		try {
 			store.addMedia(cd1,cd2,book,disc1,disc2);
 		} catch (LimitExceededException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+=======
+		store.addMedia(cd1,cd2,book,disc1,disc2);
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 		new StoreManagerScreen(store);
 	}
 

@@ -5,7 +5,10 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+<<<<<<< HEAD
 import javax.naming.LimitExceededException;
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -79,12 +82,16 @@ public class AddDigitalVideoDiscToStoreScreen extends AddItemToStoreScreen {
 				director = tfInput4.getText();
 				DigitalVideoDisc dvd = createDVD();
 //			    } 
+<<<<<<< HEAD
 				try {
 					store.addMedia(dvd);
 				} catch (LimitExceededException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+=======
+				store.addMedia(dvd);
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 				new StoreManagerScreen(store);
 				}		
 			});

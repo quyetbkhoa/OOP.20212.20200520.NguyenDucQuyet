@@ -1,6 +1,9 @@
 package hust.soict.dsai.aims.track;
 
+<<<<<<< HEAD
 import hust.soict.dsai.aims.exception.PlayerException;
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 import hust.soict.dsai.aims.playable.Playable;
 
 public class Track implements Playable{
@@ -8,6 +11,7 @@ public class Track implements Playable{
 	public Track() {
 		// TODO Auto-generated constructor stub
 	}
+<<<<<<< HEAD
 	public void play() throws PlayerException{
 		if (this.getLength()>0 ) {
 		System.out.println("Playing Track: "+ this.getTitle()+ " with length:" + this.getLength());
@@ -15,6 +19,11 @@ public class Track implements Playable{
 		else {
 			throw new PlayerException("ERROR: : track length is non-positive!");
 		}
+=======
+	public void play() {
+		if (this.getLength()>0 )
+		System.out.println("Playing Track: "+ this.getTitle()+ " with length:" + this.getLength());
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 	}
 	@Override
 	public boolean equals(Object track1) {

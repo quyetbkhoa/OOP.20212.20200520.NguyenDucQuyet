@@ -1,10 +1,17 @@
 package hust.soict.dsai.aims.disc;
 
+<<<<<<< HEAD
 import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.aims.media.Media;
 
 public class Disc extends Media{
 	public void play() throws PlayerException {
+=======
+import hust.soict.dsai.aims.media.Media;
+
+public class Disc extends Media{
+	public void play() {
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 		
 	}
 

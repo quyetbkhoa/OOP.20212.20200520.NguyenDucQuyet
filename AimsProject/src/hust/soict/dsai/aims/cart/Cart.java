@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hust.soict.dsai.aims.media.Media;
+<<<<<<< HEAD
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -10,6 +11,12 @@ public class Cart {
 	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 	public static final int MAX_ITEMS = 20;
 //	private List <Media> itemsOrdered = new ArrayList<Media>();
+=======
+
+public class Cart {
+	public static final int MAX_ITEMS = 20;
+	private List <Media> itemsOrdered = new ArrayList<Media>();
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 	public void addMedia(Media ... medias) {
 		int count =0;
 		for (int i = 0; i < medias.length; i++) {
@@ -153,7 +160,10 @@ public class Cart {
 	public void empty() {
 		this.itemsOrdered.removeAll(itemsOrdered);
 		}
+<<<<<<< HEAD
 	public ObservableList<Media> getItemsOrdered() {
 		return itemsOrdered;
 	}
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 }	

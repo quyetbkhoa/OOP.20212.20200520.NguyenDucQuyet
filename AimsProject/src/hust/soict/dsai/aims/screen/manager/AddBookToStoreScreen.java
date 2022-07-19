@@ -7,7 +7,10 @@ import java.awt.event.ActionListener;
 import java.util.Arrays;
 import java.util.List;
 
+<<<<<<< HEAD
 import javax.naming.LimitExceededException;
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -86,12 +89,16 @@ public class AddBookToStoreScreen extends AddItemToStoreScreen {
 				
 				Book book = createBook();
 //			    } 
+<<<<<<< HEAD
 				try {
 					store.addMedia(book);
 				} catch (LimitExceededException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+=======
+				store.addMedia(book);
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 				new StoreManagerScreen(store);
 				}		
 			});

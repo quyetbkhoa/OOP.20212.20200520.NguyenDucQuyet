@@ -20,7 +20,10 @@ public abstract class Media implements Comparable<Media> {
 		this.category = category;
 	}
 	public Media(String title, String category, float cost) {
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 		super();
 		nbMedia ++;
 		this.id = nbMedia;
@@ -45,6 +48,7 @@ public abstract class Media implements Comparable<Media> {
 	}
 	@Override
 	public boolean equals(Object media1) {
+<<<<<<< HEAD
 		try{
 			if (media1 instanceof Media ){
 		}
@@ -57,6 +61,14 @@ public abstract class Media implements Comparable<Media> {
 			System.out.println("Caught exception: " + e.getMessage());
 			
 		}
+=======
+		if (media1 instanceof Media ){
+			Media media2 = (Media) media1;
+		if(this.getId() == media2.getId()) {
+			return true;
+		}
+		}
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 		return false;
 	}
 	private int id;

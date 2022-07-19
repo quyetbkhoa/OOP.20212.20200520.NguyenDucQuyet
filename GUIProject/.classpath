@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry kind="src" path="src"/>
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFX"/>
+=======
+	<classpathentry kind="src" path="src"/>
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 	<classpathentry kind="output" path="bin"/>
 </classpath>

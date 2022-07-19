@@ -2,14 +2,21 @@ package hust.soict.dsai.javafx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+<<<<<<< HEAD
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+=======
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 
 public class PainterController {
 
     @FXML
+<<<<<<< HEAD
     private Pane drawingAreaPane;
     private int mode;
     @FXML
@@ -31,14 +38,32 @@ public class PainterController {
         	drawingAreaPane.getChildren().add(newCircle);
         	}
     			
+=======
+    private Pane drawAreaPane;
+
+    @FXML
+    private VBox drawingAreaPane;
+
+    @FXML
+    private Button clearBtn;
+
+    @FXML
+    void drawingAreaMouseDragged(ActionEvent event) {
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 
     }
 
     @FXML
     void clearButtonPressed(ActionEvent event) {
+<<<<<<< HEAD
     	drawingAreaPane.getChildren().clear();
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b

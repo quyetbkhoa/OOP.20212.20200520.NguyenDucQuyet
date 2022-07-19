@@ -1,0 +1,35 @@
+package hust.soict.dsai.aims.track;
+
+import hust.soict.dsai.aims.playable.Playable;
+
+public class Track implements Playable{
+
+	public Track() {
+		// TODO Auto-generated constructor stub
+	}
+	public void play() {
+		if (this.getLength()>0 )
+		System.out.println("Playing Track: "+ this.getTitle()+ " with length:" + this.getLength());
+	}
+	private String title;
+	private int length;
+	private String category;
+	private float Cost;
+	public String getTitle() {
+		return title;
+	}
+	public int getLength() {
+		return length;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public float getCost() {
+		return Cost;
+	}
+	@Override
+	public String toString() {
+		return "Track [title=" + title + ", length=" + length + "]";
+	}
+	
+}

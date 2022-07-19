@@ -3,6 +3,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import javax.naming.LimitExceededException;
 
 import hust.soict.dsai.aims.cart.Cart;
@@ -14,6 +15,15 @@ public class Store {
 	public static final int MAX_ITEMS = 40;
 	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 	public void addMedia(Media ... medias) throws LimitExceededException {
+=======
+import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.media.Media;
+
+public class Store {
+	public static final int MAX_ITEMS = 40;
+	private List <Media> itemsOrdered = new ArrayList<Media>();
+	public void addMedia(Media ... medias) {
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 		int count =0;
 		for (int i = 0; i < medias.length; i++) {
 		if ( this.itemsOrdered.size()< Cart.MAX_ITEMS) {
@@ -28,9 +38,12 @@ public class Store {
 				count+=1;
 				
         }}
+<<<<<<< HEAD
 		else {
 			throw new LimitExceededException("ERROR: The number of media has reach its limit");
 		}
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 		
 		}
 	System.out.println(count+ " media has been added to the store");
@@ -53,6 +66,7 @@ public class Store {
 		this.itemsOrdered.removeAll(toRemove);
 		System.out.println("all media with title :"+ title + " have been remove");
 		}
+<<<<<<< HEAD
 	public void removeMedia( Media media) {
 		for (Media x: this.itemsOrdered) {
 			if (x==media) {
@@ -62,6 +76,8 @@ public class Store {
 			}
 		}
 	}
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 
 	
 //	Display

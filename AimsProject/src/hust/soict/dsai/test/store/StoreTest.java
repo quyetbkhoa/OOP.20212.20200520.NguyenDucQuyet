@@ -2,15 +2,22 @@ package hust.soict.dsai.test.store;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 import javax.naming.LimitExceededException;
 
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 import hust.soict.dsai.aims.book.Book;
 import hust.soict.dsai.aims.cd.CompactDisc;
 import hust.soict.dsai.aims.dvd.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
+<<<<<<< HEAD
 	public static void main(String[] args) throws LimitExceededException {
+=======
+	public static void main(String[] args) {
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 		Store store = new Store();
 		
 		DigitalVideoDisc dvd1 = new DigitalVideoDisc(" The Lion King",

@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hust.soict.dsai.aims.disc.Disc;
+<<<<<<< HEAD
 import hust.soict.dsai.aims.exception.PlayerException;
+=======
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 import hust.soict.dsai.aims.playable.Playable;
 import hust.soict.dsai.aims.track.Track;
 
@@ -15,6 +18,7 @@ public class CompactDisc extends Disc implements Playable{
 
 	}
 
+<<<<<<< HEAD
 	public void play() throws PlayerException {
 		if(this.getLength()>0) {
 		System.out.println("Playing CD: "+ this.getTitle());
@@ -37,6 +41,16 @@ public class CompactDisc extends Disc implements Playable{
 			
 		}
 		
+=======
+	public void play() {
+	
+		System.out.println("Playing CD: "+ this.getTitle());
+		System.out.println("CD length: " + this.getLength());
+	
+		for(Track x: this.tracks) {
+			x.play();
+		}
+>>>>>>> 80e636db6e68b7f6649a34cbda3995e477f28d7b
 	}
 	public CompactDisc() {
 		// TODO Auto-generated constructor stub
